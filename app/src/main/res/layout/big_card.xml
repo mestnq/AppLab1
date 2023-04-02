@@ -1,104 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="480dp"
-    android:layout_margin="10dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-<LinearLayout
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:layout_constraintTop_toTopOf="parent"
-    android:background="@drawable/border_radius"
-    android:orientation="vertical"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="21dp"
+    android:layout_marginTop="21dp">
 
     <LinearLayout
-        android:layout_gravity="bottom"
+        android:layout_width="360dp"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/border_radius"
+        android:orientation="vertical"
+        >
 
-        <include
-            android:id="@+id/header_things"
-            layout="@layout/card_header" />
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingVertical="5dp">
+
+            <include
+                android:id="@+id/header_things"
+                layout="@layout/card_header"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/baseline_more_vert_24"/>
+
+        </LinearLayout>
 
         <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/baseline_more_vert_24"
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="188dp"
+            android:src="@drawable/default_image_thin"
+            android:scaleType="fitXY"
             android:contentDescription="@string/description" />
 
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="188dp"
-        android:src="@drawable/default_image_thin"
-        android:scaleType="fitXY"
-        android:contentDescription="@string/description" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:orientation="vertical">
-
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginTop="16dp"
-            >
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/title"/>
-
-            <TextView
-                android:id="@+id/subheadForTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/subhead"
-                android:layout_marginTop="8dp"
-                /></LinearLayout>
-
-
-        <TextView
-            android:id="@+id/description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sample"
-        android:layout_marginTop="32dp"
-        />
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:layout_marginStart="85dp">
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:orientation="vertical">
 
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="119dp"
-            android:layout_height="48dp"
-            app:cornerRadius="100dp"
-            android:layout_marginEnd="8dp"
-            android:text="@string/enabled"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                >
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/title"/>
 
-            style="?attr/materialButtonOutlinedStyle" />
+                <TextView
+                    android:id="@+id/subheadForTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/subhead"
+                    android:layout_marginTop="8dp"
+                    /></LinearLayout>
 
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="110dp"
-            android:layout_height="48dp"
-            app:cornerRadius="100dp"
-            android:text="@string/enabled"
-            /></LinearLayout>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sample"
+                android:layout_marginTop="32dp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_gravity="right"
+                android:layout_marginEnd="10dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="119dp"
+                    android:layout_height="48dp"
+                    app:cornerRadius="100dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/enabled"
+
+                    style="?attr/materialButtonOutlinedStyle" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="110dp"
+                    android:layout_height="48dp"
+                    app:cornerRadius="100dp"
+                    android:text="@string/enabled"
+                    /></LinearLayout>
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

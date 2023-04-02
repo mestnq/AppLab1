@@ -11,4 +11,6 @@
     <string name="title">Title</string>
     <string name="subhead">Subhead</string>
     <string name="enabled">Enabled</string>
+    <string name="aboutColor">Меняет цвет фона карточки выше при переключении</string>
+    <string name="bigText">А это текст полный смысла и очень большой, наверное тут должно быть описание сказочного персонажа или ещё кого-то, вообщем смысл простой - длинный текст, а ещё он не доходит до конца экрана, это фича</string>
 </resources>

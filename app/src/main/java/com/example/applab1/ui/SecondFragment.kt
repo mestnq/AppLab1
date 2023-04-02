@@ -24,9 +24,9 @@ class SecondFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = SecondFragmentBinding.inflate(inflater, container, false)
-        //binding.toolbar.setOnClickListener {
-        //    findNavController().navigateUp()
-        //}
+        binding.back.setOnClickListener {
+            findNavController().navigateUp()
+        }
         binding.bigUgaBuga.text = args.id
         binding.materialSwitch.setOnCheckedChangeListener { _, isChecked ->
             binding.text.setBackgroundColor(resources.getColor(if (isChecked) R.color.teal_200 else R.color.primary_90, context?.theme))
