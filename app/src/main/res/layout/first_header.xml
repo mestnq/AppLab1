@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.MaterialToolbar
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/header_toolbar"
+android:layout_width="match_parent"
+android:layout_height="?attr/actionBarSize"
+android:background="@color/light_purple"
+app:titleTextColor="@color/black_text"
+app:navigationIcon="@drawable/ic_menu"
+app:title="@string/header_title"
+    app:titleCentered="true">
+    <ImageView
+        android:id="@+id/account_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end|center_vertical"
+        android:paddingEnd="22dp"
+        android:paddingStart="22dp"
+        android:src="@drawable/ic_account"
+        android:contentDescription="@string/content_description_ic_icon" />
+</com.google.android.material.appbar.MaterialToolbar>

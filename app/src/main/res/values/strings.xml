@@ -1,0 +1,15 @@
+<resources>
+    <string name="header_title">Product</string>
+    <string name="content_description_ic_icon">Your account</string>
+    <string name="sample">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo</string>
+    <string name="app_name">AppLab!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="id">-1</string>
+    <string name="like">Лайк</string>
+    <string name="share">Поделиться</string>
+    <string name="description">Описание</string>
+    <string name="title">Title</string>
+    <string name="subhead">Subhead</string>
+    <string name="enabled">Enabled</string>
+</resources>
