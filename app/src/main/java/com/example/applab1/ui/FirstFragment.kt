@@ -27,7 +27,7 @@ class FirstFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        println("FirstFragment onCreate")
         items = apiManager.getSampleList()
     }
 
@@ -35,12 +35,14 @@ class FirstFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        println("FirstFragment onCreateView")
         binding = FirstFragmentBinding.inflate(inflater, container, false)
         return _binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        println("FirstFragment onViewCreated")
 
         val newAdapter = ItemsListAdapter {
             findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment(it.id.toString(), it.header, it.subheadForHeader, it.title, it.subheadForTitle, it.description))

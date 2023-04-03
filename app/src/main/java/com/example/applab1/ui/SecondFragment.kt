@@ -23,6 +23,7 @@ class SecondFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        println("SecondFragment onCreateView")
         binding = SecondFragmentBinding.inflate(inflater, container, false)
         binding.back.setOnClickListener {
             findNavController().navigateUp()
